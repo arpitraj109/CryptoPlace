@@ -1,0 +1,132 @@
+/* General Styles */
+.coin {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.coin-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.coin-name img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+
+.coin-name p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #212529;
+}
+
+/* Chart Section */
+.coin-chart {
+    max-width: 100%; /* Ensure it doesn't exceed the parent width */
+    width: 600px; /* Set a preferred width */
+    height: 300px; /* Adjust the height */
+    margin: 20px auto;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    overflow-x: auto; /* Allow horizontal scroll if content overflows */
+}
+
+
+/* Coin Info Section */
+.coin-info {
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coin-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.coin-info ul:last-child {
+    border-bottom: none;
+}
+
+.coin-info li {
+    font-size: 1rem;
+    color: #495057;
+}
+
+.coin-info li:first-child {
+    font-weight: bold;
+    color: #212529;
+}
+
+/* Spinner Styles */
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f8f9fa;
+}
+
+.spin {
+    border: 4px solid #ddd;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .coin {
+        padding: 15px;
+    }
+
+    .coin-name p {
+        font-size: 1.2rem;
+    }
+
+    .coin-info ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .coin-info li {
+        font-size: 0.9rem;
+    }
+
+    .coin-chart {
+        height: 250px;
+    }
+}
